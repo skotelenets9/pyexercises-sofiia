@@ -30,5 +30,10 @@ DELIVERABLE
 
 # Your code below
 print ("hello,world")
+print("1.hello")
+print("2.hello")
+print("3.hello")
+print("4.hello")
+print("5.hello")
 
        
