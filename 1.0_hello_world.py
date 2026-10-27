@@ -22,10 +22,10 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. My message, and why:
+# 1. In: a string of my name 
+# 2. Process: a for loop that iterates 5 times and prints the string each time
+# 3. Out: the string printed 5 times
+# 4. My message, and why: "Hello, World!" because it's a classic greeting that is widely recognized and used in programming tutorials.
 
 
 # Your code below
@@ -36,4 +36,5 @@ print("3.hello")
 print("4.hello")
 print("5.hello")
 
-       
+for i in range(0,5):
+    print("hello")

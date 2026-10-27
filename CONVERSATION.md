@@ -18,3 +18,22 @@ print(message)
 ```
 
 What is the name of the function used to print something in Python?
+
+---
+## 2026-10-27 13:40, in .
+
+**Me:** How to write a for loop
+
+**Tutor:**
+
+A for loop iterates over a sequence (list, string, etc.) and runs a block of code for each item.
+
+```python
+# Loop over a list of toy products
+products = ["alpha", "beta", "gamma"]
+
+for item in products:
+    print(item)  # TODO: replace with your logic
+```
+
+What must the loop variable be called if you want to access the index as well?
