@@ -25,10 +25,31 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
+# 1. In: A list of marketing budgets in euros.
+# 2. Process:The program rearranges the budgets in four ways. 
+# 3. Out: Four diffrent orders and an original unchanged list.
 # 4. My four orders, and which ones modify the original:
-
+# Original order: Keeps the budgets as initially entered.
+# Ascending order: From smallest to largest, using sorted().
+# Descending order: From largest to smallest, using sorted().
+# Reversed order: Displays the budgets in reverse order.
+# None of these operations modify the original list.
 
 # Your code below
+budgets = [500, 1200, 800, 1500, 600, 2000, 900, 1100]
+#Original list: 
+print("Original order:", budgets)
+#Ascending : 
+print("Ascending order:", sorted(budgets))
+#Descending order: 
+print("Descending order:", sorted(budgets, reverse=True))
+#Reversed order: 
+print("Reversed order", budgets[::-1])
+#The original unchanged:
+print("Original list at the end:", budgets)
+
+# Test: I compared the original list with the final list.
+# The eight budgets remained in the same order.
+# sorted() creates a new list without modifying the original.
+# Reversing with [::-1] also creates a new list.
+# The original list was preserved.
