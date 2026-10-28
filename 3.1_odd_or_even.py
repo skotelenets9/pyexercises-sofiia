@@ -24,10 +24,34 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
+# 1. In:The user enters the integer N
+# 2. Process: The program checks numbers from 1 to N to see if it is odd or even
+# 3. Out: A list of numbers showing whether the numbers are odd or even
 # 4. What happens on 0, on a negative number, on a very large number:
+#0 : Displays a message since it's neither odd or even
+# Negative number: Error message 
+# 5000: Displays a message asking the user to enter a smaller number 
 
 
 # Your code below
+N = int(input("Enter a number:"))
+if N == 0:
+    print("There are no numbers to check.")
+
+elif N < 0:
+    print("Please enter a positive number.")
+
+elif N > 100: 
+    print("The number is too large. Please enter a number up to 100.")
+
+else:
+    for number in range(1, N + 1):
+        if number % 2 == 0:
+            print(number, "it's even")
+        else:
+            print(number, "is odd")
+
+# Test N = 6: 3 odd and 3 even numbers, as expected.
+# Test N = 0: A message is displayed because there are no numbers to check.
+# Test N = -4: A message asks for a positive number.
+# Test N = 5000: A message asks for a number up to 100.
