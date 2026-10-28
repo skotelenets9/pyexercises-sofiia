@@ -129,3 +129,13 @@ Refused, off topic.
 **AI:** The results are correct. `sorted()` and slicing create new lists rather than modifying the original.
 
 **What I learned:** I learned the difference between reordering a list without changing it and modifying a list directly. I also learned how to fix a `NameError` caused by an undefined variable.
+Exercise 5.1 — Doing the Same Thing to Every Item
+
+Me: I need help with Exercise 5.1. I have to reuse my marketing budgets list from Exercise 4.0 and display each item's position and something calculated about it.
+
+AI: You can use a for loop with enumerate() to display each campaign's position, budget, and percentage of the total marketing budget.
+
+Me: I ran my program using python 5.1_for_loops.py. It displayed eight campaigns with their budgets and percentages.
+
+AI: Your program works correctly. It prints exactly eight lines for eight campaigns. The total marketing budget is €8,600, and Campaign 6 has the largest share at 23.26%.
+What I learned: I learned how to use for loops, enumerate(), and round() to process every item in a list, calculate percentages, and verify that the number of output lines matches the number of items.
