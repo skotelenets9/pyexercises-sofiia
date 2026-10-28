@@ -23,10 +23,41 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
+# 1. In:Info about a music marketing campaign.
+# 2. Process:The program creates a dictionary, reads a field, updates a value, removes a field and displays remaining fields. 
+# 3. Out: The capaign info after changes.
 # 4. My object, my five fields, and why those:
-
+#My object is a music marketing campaign.
+# Name: identifies the campaign.
+# Artist: identifies who is being promoted.
+# Budget: tracks marketing expenses.
+# Platform: identifies the advertising channel.
+# Status: tracks campaign progress.
 
 # Your code below
+campaign = {
+    "name": "New Album Launch",
+    "artist": "Drake",
+    "budget": 8900,
+    "platform": "Instagram",
+    "status": "Planned"
+}
+#Read one field: 
+print("Campaign name:", campaign["name"])
+
+#Change:
+campaign["budget"] = 8000
+print("Updated budget:", campaign["budget"])
+
+# Remove a field
+del campaign["status"]
+
+# Display all remaining fields
+for key, value in campaign.items():
+    print(key, ":", value)
+
+print("Audience:", campaign.get("audience", "Not available"))
+
+# Test: Accessing a missing field with [] caused a KeyError.
+# Using .get() displayed "Not available" instead.
+# The program now handles missing fields without crashing.
