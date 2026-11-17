@@ -26,11 +26,13 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
+# 1. In: Two numbers entered by the user.
+# 2. Process: The program adds the two numbers using a function.
+# 3. Out:The sum of the two numbers.
 # 4. My function name, and why return rather than print:
-
+# My function is called add_numbers because it adds two numbers.
+# return sends the result back so it can be reused.
+# print only displays the result on the screen.
 
 # Your code below
 number_1 = 10

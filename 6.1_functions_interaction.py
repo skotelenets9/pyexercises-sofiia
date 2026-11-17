@@ -28,10 +28,72 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process, function by function:
-# 3. Out:
+# 1. In: A number entered by the user or defined in the program.
+# 2. Process, function by function: The program uses functions and if/else conditions
+# to check whether the number is positive, negative, or zero.
+# 3. Out: A message describing the number as positive,
+# negative, or zero.
 # 4. The question my fourth function answers:
+# is_positive(): Checks if the number is greater than zero.
+# is_negative(): Checks if the number is less than zero.
+# is_zero(): Checks if the number equals zero.
+# is_even(): Checks if the number is divisible by 2.
+# detailed_message(): Returns a message describing the number.
 
 
 # Your code below
+number = -4
+if number > 0:
+    print("The number is positive")
+else:
+    print("The number is negative")
+
+number = 5
+if number > 0:
+    print("The number is positive")
+else:
+    print("The number is negative")
+
+number = 9
+if number > 0:
+    print("The number is positive")
+else:
+    print("The number is negative")
+
+def check(number):
+    if number > 0:
+        print("The number is positive")
+    else:
+        print("The number is negative")
+
+num = int(input("Enter a number:"))
+check(num)
+
+
+
+def is_positive(num):
+    return num > 0
+
+def is_negative(num):
+    return num < 0
+
+def is_zero(num):
+    return num == 0
+
+def is_even(num):
+    return num % 2 == 0
+
+def detailed_message(num):
+    if is_zero(num):
+        return "The number is zero."
+    elif is_positive(num):
+        return "The number is positive."
+    elif is_negative(num):
+        return "The number is negative."
+    elif is_even(num):
+        return "The number is even."
+    else:
+        return "The number is odd."
+
+number = 0
+print(detailed_message(number))
