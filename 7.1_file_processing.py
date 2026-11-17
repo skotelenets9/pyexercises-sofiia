@@ -37,15 +37,51 @@ DELIVERABLE
 """
 
 # What is wrong with names.txt (found by reading it, not by guessing):
-# -
-# -
-# -
-# -
+# - Some names are written in uppercase and others in lowercase.
+# - Some lines have extra spaces at the beginning.
+# - There are empty lines between names.
+# - Capitalization is inconsistent within names.
 
-# 1. In:
+# 1. In: A text file called names.txt containing people's names.
 # 2. Process, problem by problem:
-# 3. Out:
+# Remove empty lines.
+# Remove extra spaces using strip()
+# Capitalize names consistently using title()
+# Sort names alphabetically by last name. 
+
+# 3. Out: A new file called sorted_names.txt containing cleaned names sorted by last name.
+
 # 4. How I decide which word is the last name:
+# I assume the last word og each name is the last name.
+# I use split()[-1] to find it and sort alphabetically.
 
 
 # Your code below
+# Read the original file
+with open("names.txt", "r", encoding="utf-8") as file:
+    names = file.readlines()
+
+# Clean the names
+cleaned_names = []
+
+for name in names:
+    clean_name = " ".join(name.strip().split()).title()
+
+    if clean_name:
+        cleaned_names.append(clean_name)
+
+# Sort by last name
+cleaned_names.sort(key=lambda name: name.split()[-1].lower())
+
+# Save the cleaned names in a new file
+with open("sorted_names.txt", "w", encoding="utf-8") as file:
+    for name in cleaned_names:
+        file.write(name + "\n")
+
+print("Names cleaned and saved successfully!")
+
+# Test: names.txt contained 10 lines, including 2 empty lines.
+# The output file contains 8 cleaned names.
+# The first name in sorted order is Margaret Hamilton.
+# The last name in sorted order is Guido Van Rossum.
+# The original names.txt file was not modified.

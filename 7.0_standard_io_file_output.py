@@ -29,10 +29,58 @@ DELIVERABLE
     This file, plus the CSV your program produced.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out, file name and columns:
-# 4. Why these columns, and what this file is for:
+# 1. In: Campaign name, advertising platform, and budget. 
+# 2. Process: The program asks the user for campaign details and saves them to a CSV file.
+# It adds new entries without deleting previous ones and checks that the budget is valid.
 
+
+# 3. Out, file name and columns: marketing_campaigns.csv
+# Columns : Campaign, Platform, Budget.
+
+# 4. Why these columns, and what this file is for:
+# I chose these columns to track marketing expenses.
+# With 200 entries, I could compare advertising platforms, calculate total spending, and analyse campaign budgets.
 
 # Your code below
+import csv
+import os
+
+# Ask the user for campaign information
+campaign = input("Enter campaign name: ").strip()
+platform = input("Enter advertising platform: ").strip()
+
+# Make sure the campaign name and platform are not empty
+while not campaign:
+    campaign = input("Enter a campaign name: ").strip()
+
+while not platform:
+    platform = input("Enter a platform: ").strip()
+
+# Check that the budget is a valid number
+while True:
+    try:
+        budget = float(input("Enter budget in euros: "))
+        if budget >= 0:
+            break
+        print("Budget cannot be negative.")
+    except ValueError:
+        print("Please enter a valid number.")
+
+# Check whether the CSV needs a header
+filename = "marketing_campaigns.csv"
+new_file = not os.path.exists(filename) or os.path.getsize(filename) == 0
+
+# Add the campaign to the CSV file
+with open(filename, "a", newline="") as file:
+    writer = csv.writer(file)
+
+    if new_file:
+        writer.writerow(["Campaign", "Platform", "Budget"])
+
+    writer.writerow([campaign, platform, budget])
+
+print("Campaign saved successfully!")
+
+# Test: I ran the program three times with different campaign details.
+# The CSV contains three entries and one header.
+# Previous entries were not overwritten.
