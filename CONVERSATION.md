@@ -139,3 +139,63 @@ Me: I ran my program using python 5.1_for_loops.py. It displayed eight campaigns
 
 AI: Your program works correctly. It prints exactly eight lines for eight campaigns. The total marketing budget is €8,600, and Campaign 6 has the largest share at 23.26%.
 What I learned: I learned how to use for loops, enumerate(), and round() to process every item in a list, calculate percentages, and verify that the number of output lines matches the number of items.
+python tutor.py --check
+
+---
+## 2026-11-15 14:09, in .
+
+**Me:** final exem
+
+**Tutor:**
+
+Refused, off topic.
+
+---
+## 2026-11-15 14:14, in .
+
+**Me:** I am preparing for my Python final exam.
+
+**Tutor:**
+
+Refused, off topic.
+
+---
+## 2026-11-15 14:14, in .
+
+**Me:** How do I read a CSV file in Python using csv.DictReader? Please show me a small example.
+
+**Tutor:**
+
+Reading a CSV file with csv.DictReader.
+
+```python
+import csv
+
+# TODO: replace 'data.csv' with your file name
+with open('data.csv', newline='') as csvfile:
+    reader = csv.DictReader(csvfile)
+    for row in reader:
+        # TODO: print or process each row
+        print(row)
+```
+
+Question: Which argument does newline='' belong to?
+
+---
+## 2026-11-15 14:18, in .
+
+**Me:** newline='' is an argument of the open() function.
+
+**Tutor:**
+
+The newline='' argument tells Python how to handle line endings when opening a file in text mode.
+
+Pattern:
+```python
+# Writing a string with newlines to a file
+text = "line 1\nline 2\nline 3"
+with open("output.txt", "w", newline='') as file:
+    file.write(text)  # The \n characters are written exactly as-is
+```
+
+What does newline='' do to the line endings in the file?
