@@ -83,5 +83,5 @@ print("Names cleaned and saved successfully!")
 # Test: names.txt contained 10 lines, including 2 empty lines.
 # The output file contains 8 cleaned names.
 # The first name in sorted order is Margaret Hamilton.
-# The last name in sorted order is Guido Van Rossum.
+# The last name in sorted order is Alan Turing.
 # The original names.txt file was not modified.
